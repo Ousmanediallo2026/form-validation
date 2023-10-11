@@ -26,3 +26,10 @@ h1 {
     color: blue !important;
     text-transform: uppercase;
 }
+#paragraph {
+    text-align: center;
+    color: red;
+    font-size: 18px;
+    margin: 5px !important;
+    display: none;
+}
