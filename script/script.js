@@ -12,37 +12,52 @@
       const userPassword = document.getElementById("password").value;
       const userConfirmPassword = document.getElementById("password-1").value;
       const userCheckbox = document.getElementById("checkbox");
+      console.log( typeof userSelectSubject);
   
       if (userName === "") {
         paragraphElement.style.display = "block";
         paragraphElement.textContent = "Please enter your name";
         console.log("Please enter your name");
-      } else if (email === "") {
+        return false;
+
+      }  
+      if (email === "") {
         paragraphElement.style.display = "block";
         paragraphElement.textContent = "Please enter your email";
+        console.log("email input")
+        return false;
         
-      } else if (phoneNumber === "") {
+      }  
+      if (phoneNumber === "") {
         paragraphElement.style.display = "block";
         paragraphElement.textContent = "Please enter your phone number";
+        console.log("Phone Input")
+        return false;
 
-      } else if (userSelectSubject === "") {
+      }
+       if (userSelectSubject == 0) {
         paragraphElement.style.display = "block";
         paragraphElement.textContent = "Please Select One Subject";
-        
-      } else if (userPassword === "") {
-        paragraphElement.style.display = "block";
-        paragraphElement.textContent = "Please enter your password";
-        
-      } else if (userConfirmPassword === "") {
-        paragraphElement.style.display = "block";
-        paragraphElement.textContent = "Please enter confirm the same password above";
-         
-          
-        } else if (userPassword == userConfirmPassword) {
-          paragraphElement.style.display = "block";
-          paragraphElement.textContent = "The Password does not match.";
+        console.log("hello")
+        return false;
         
       } 
+      //  if (userPassword === "") {
+      //   paragraphElement.style.display = "block";
+      //   paragraphElement.textContent = "Please enter your password";
+        
+      // } 
+      //  if (userConfirmPassword === "") {
+      //   paragraphElement.style.display = "block";
+      //   paragraphElement.textContent = "Please enter confirm the same password above";
+         
+          
+      //   } 
+      //   if (userPassword == userConfirmPassword) {
+      //     paragraphElement.style.display = "block";
+      //     paragraphElement.textContent = "The Password does not match.";
+        
+      // } 
        else {
         alert("Successfully Submitted");
       }
