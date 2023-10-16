@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
         
       } 
      
-      if (userPassword === userConfirmPassword) {
+      if (userPassword !== userConfirmPassword) {
         paragraphElement.style.display = "block";
         paragraphElement.textContent = "The Password does not match.";
         return false;
@@ -68,6 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (userCheckbox === "") {
       paragraphElement.style.display = "block";
       paragraphElement.textContent = "Please check the box to move forward.";
+      console.log("sucessful")
       return false;
     }
      else {
